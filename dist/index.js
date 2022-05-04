@@ -8791,9 +8791,6 @@ async function run() {
       repo: repo,
     });
 
-    console.log("Lista Workflows")
-    console.log(listWorkflows)
-
     lstRuns = []
     for (const [i, v] of listWorkflows["workflows"].entries()) {
       wfName = v["name"]
@@ -8807,8 +8804,6 @@ async function run() {
         workflow_id: wId,
         per_page: 100
       });
-
-
       // console.log(listWorkflowRuns)
 
       // Agrupo todoas las Ejecuciones , si fuera necesario aplico filtro.
