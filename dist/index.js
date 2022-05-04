@@ -8847,8 +8847,8 @@ async function run() {
       iPos = iPos + 1
       if (iPos > num_runs) {
         const { data: deletedWorkflowRun } = await octokit.rest.actions.deleteWorkflowRun({
-          owner: 'jmmirand',
-          repo: 'gha_clean_action_logs',
+          owner: owner,
+          repo: repo,
           run_id: v["id"]
         });       
 
