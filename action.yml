@@ -1,13 +1,26 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Github Action Log Cleaner'
+author: 'Jose Miguel Miranda'
+description: 'Limpia los logs/ejecuciones generados por Github Actions en un repo'
+
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  num_runs:
+    description: "Numero Logs/Ejeuciones que dejamos sin borrar"
+    required: false
+    default: 10
+
+  myToken:
+    description: "PAT con permiso escritura en el repo"
     required: true
-    default: '1000'
+      
 outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+  output_text:
+    description: 'Temporal'
+
+
 runs:
   using: 'node16'
   main: 'dist/index.js'
+
+branding:
+  icon: 'delete'
+  color: 'yellow'
