@@ -8776,8 +8776,6 @@ function compareRuns(a, b) {
   return b["date"] - a["date"];
 }
 
-console.log("Limpieza runs/logs de: " + owner + "/" + repo)
-console.log("Se dejarán: " + num_runs  )
 
 async function run() {
 
@@ -8806,11 +8804,10 @@ async function run() {
       const { data: listWorkflowRuns } = await octokit.rest.actions.listWorkflowRuns({
         owner: owner,
         repo: repo,
-        workflow_id: wId
+        workflow_id: wId,
+        per_page: 100
       });
 
-      console.log("Lista runs/logs")
-      console.log(listWorkflowRuns)
 
       // console.log(listWorkflowRuns)
 
