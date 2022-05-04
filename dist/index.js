@@ -8783,6 +8783,10 @@ async function run() {
 
     const octokit = github.getOctokit(myToken)
 
+    console.log("Lista de Workflows .... " + owner + "/" + repo)
+    console.log("Longitud Token : " + myToken.length() )
+
+
     // Lista de Workflows del Repo 
     const { data: listWorkflows } = await octokit.rest.actions.listRepoWorkflows({
       owner: owner,
