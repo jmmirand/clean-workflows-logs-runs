@@ -8784,7 +8784,7 @@ async function run() {
     const octokit = github.getOctokit(myToken)
 
     console.log("Lista de Workflows .... " + owner + "/" + repo)
-    console.log("Longitud Token : " + myToken.length() )
+    console.log("Longitud Token : " + myToken.length )
 
 
     // Lista de Workflows del Repo 
@@ -8792,6 +8792,8 @@ async function run() {
       owner: owner,
       repo: repo,
     });
+
+    console.log(listWorkflows)
 
     lstRuns = []
     for (const [i, v] of listWorkflows["workflows"].entries()) {
