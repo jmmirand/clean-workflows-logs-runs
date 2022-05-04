@@ -32,6 +32,7 @@ async function run() {
       repo: repo,
     });
 
+    console.log("Lista Workflows")
     console.log(listWorkflows)
 
     lstRuns = []
@@ -46,6 +47,9 @@ async function run() {
         repo: repo,
         workflow_id: wId
       });
+
+      console.log("Lista runs/logs")
+      console.log(listWorkflowRuns)
 
       // console.log(listWorkflowRuns)
 
