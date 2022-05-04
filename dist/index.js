@@ -8778,7 +8778,7 @@ function compareRuns(a, b) {
 
 
 async function run() {
-
+  try {
     const octokit = github.getOctokit(myToken)
 
     console.log("Lista de Workflows .... " + owner + "/" + repo)
@@ -8852,9 +8852,11 @@ async function run() {
         console.log("")
 
       }
-
     }
-
+  }
+  catch (error) {
+    core.setFailed(error.message);
+  }
 }
 
 run();
