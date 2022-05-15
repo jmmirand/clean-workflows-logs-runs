@@ -9,12 +9,11 @@ const repo = process.env.GITHUB_REPOSITORY.replace(owner + "/","")
 const num_runs = parseInt(core.getInput('num_runs'));
 const myToken = core.getInput('myToken');
 
-if ( myToken == '') {
-
+if ( myToken == '' || yourvar == undefined)  {
   console.log("Sin Token , debo buscar el valor bueno")  
 }
 
-console.log("PAT:" + myToken)
+console.log("PAT:#" + myToken + "#")
 
 // Funcion que me va permitir dos ejecuciones de workflows
 // Compara las fechas de ulitma actualizacion
