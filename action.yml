@@ -9,13 +9,8 @@ inputs:
     default: 10
 
   myToken:
-    description: "PAT con permiso escritura en el repo"
-    required: true
-      
-outputs:
-  output_text:
-    description: 'Temporal'
-
+    description: "PAT Personal Access Token para borrar ejecuciones/logs"
+    required: false
 
 runs:
   using: 'node16'

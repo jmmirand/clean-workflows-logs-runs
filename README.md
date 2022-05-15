@@ -1,11 +1,25 @@
-# clean-workflows-logs-runs
+# clean-workflows-logs-runs V1
 
-Acción de Github que permite la limpieza de los logs de los jobs
+Acción de Github que permite la limpieza de los logs de los jobs.
 
-## Parametros
+Por defecto usará el token asociado al workflow **${{ secrets.GITHUB_TOKEN }}**
 
-* num_logs: Numero de Ficheros Logs que se quedan
-* myToken : Token acctions
+## Usage
+
+```yaml
+
+
+uses: jmmirand/clean-workflows-logs-runs@main
+with:
+  # PAT Personal Access Token utilizado para eliminar las ejecuciones
+  # Default: ${{ github.GITHUB_TOKEN }}
+  myToken: ${{ secrets.myToken }}
+
+  # Numero de ejecuciones que dejamos sin borrar
+  # Default: 5
+  num_runs: ${{ inputs.num_runs }}
+
+```
 
 ## Referencias
 
@@ -14,6 +28,7 @@ Acción de Github que permite la limpieza de los logs de los jobs
 * [Variables de entornos disponibles en una acción](https://docs.github.com/es/actions/learn-github-actions/environment-variables#default-environment-variables)
 * Primer contacto [Crear Github Actions Adictos Trabajo](https://www.adictosaltrabajo.com/2020/10/30/como-crear-acciones-utilizando-github-actions/)
 * [Librerías JavaScritp para Construccion de Github Actions](https://github.com/actions/toolkit)
+* [Gestionar GITHUB_TOKEN](https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp)
 
 ## Usage
 
