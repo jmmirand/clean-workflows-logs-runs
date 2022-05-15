@@ -9,7 +9,7 @@ const repo = process.env.GITHUB_REPOSITORY.replace(owner + "/","")
 const num_runs = parseInt(core.getInput('num_runs'));
 const myToken = core.getInput('myToken');
 
-if ( myToken = '') {
+if ( myToken == '') {
 
   console.log("Sin Token , debo buscar el valor bueno")  
 }
