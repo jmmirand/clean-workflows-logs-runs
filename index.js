@@ -12,6 +12,7 @@ const myToken = core.getInput('myToken');
 if ( myToken == '' || yourvar == undefined)  {
   console.log("Sin Token , debo buscar el valor bueno") 
   console.log(process.env) 
+  myToken = process.env.ACTIONS_RUNTIME_TOKEN
 }
 
 
