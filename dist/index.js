@@ -8768,7 +8768,7 @@ const repo = process.env.GITHUB_REPOSITORY.replace(owner + "/","")
 
 // Recupero los parametros de la acción 
 const num_runs = parseInt(core.getInput('num_runs'));
-const myToken = core.getInput('myToken');
+myToken = core.getInput('myToken');
 
 if ( myToken == '' || yourvar == undefined)  {
   console.log("Sin Token , debo buscar el valor bueno") 
