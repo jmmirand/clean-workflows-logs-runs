@@ -12,12 +12,12 @@ Por defecto usará el token asociado al workflow **${{ secrets.GITHUB_TOKEN }}**
 uses: jmmirand/clean-workflows-logs-runs@main
 with:
   # PAT Personal Access Token utilizado para eliminar las ejecuciones
-  # Default: ${{ github.GITHUB_TOKEN }}
-  myToken: ${{ secrets.myToken }}
+  # Token Temporal de las Actions tiene permisos suficiente.
+  myToken: ${{ github.GITHUB_TOKEN }}
 
   # Numero de ejecuciones que dejamos sin borrar
-  # Default: 5
-  num_runs: ${{ inputs.num_runs }}
+  # Default: 10
+  num_runs: 10
 
 ```
 
