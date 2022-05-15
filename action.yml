@@ -10,7 +10,7 @@ inputs:
 
   myToken:
     description: "PAT Personal Access Token para borrar ejecuciones/logs"
-    required: false
+    required: true
 
 runs:
   using: 'node16'
