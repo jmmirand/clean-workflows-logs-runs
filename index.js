@@ -7,7 +7,7 @@ const repo = process.env.GITHUB_REPOSITORY.replace(owner + "/","")
 
 // Recupero los parametros de la acción 
 const num_runs = parseInt(core.getInput('num_runs'));
-myToken = core.getInput('myToken');
+const myToken = core.getInput('myToken');
 
 // Funcion que me va permitir dos ejecuciones de workflows
 // Compara las fechas de ulitma actualizacion
