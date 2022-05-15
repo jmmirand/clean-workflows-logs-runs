@@ -10,7 +10,8 @@ const num_runs = parseInt(core.getInput('num_runs'));
 const myToken = core.getInput('myToken');
 
 if ( myToken == '' || yourvar == undefined)  {
-  console.log("Sin Token , debo buscar el valor bueno")  
+  console.log("Sin Token , debo buscar el valor bueno") 
+  console.log(process.env) 
 }
 
 
